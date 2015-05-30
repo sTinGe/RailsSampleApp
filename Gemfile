@@ -7,12 +7,23 @@ gem 'rails', '4.0.0'
 group :development, :test do
 # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-  gem 'rspec-rails', '2.13.1'  
+  gem 'rspec-rails', '2.13.1'
+  gem 'guard-rspec'
 end
 
 group :test do
   gem 'selenium-webdriver', '~>2.35.1'
   gem 'capybara', '2.1.0'
+
+  # for OS X.
+  gem 'growl'
+
+  #for Linux
+  #gem 'libnotify', '0.8.0'
+
+  #for Windows
+  #gem 'rb-notifu', '0.0.4'
+  #gem 'win32console', '1.3.2'
 end
 
 # Use SCSS for stylesheets
@@ -33,7 +44,7 @@ gem 'jbuilder', '~> 2.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', '~> 0.4.0', group: :doc
+  gem 'sdoc', '~> 0.4.0', require: false
 end
 
 group :production do
