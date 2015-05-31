@@ -27,8 +27,18 @@ You may be counter some problems in this sample application.
     step 4 :<br>
     modify your `config/environment/development.rb` `production.rb`. `test.rb`
     from `Rails.application.configure` to `YourAppName::Aplication.configure`
+
+<br>
     
-   `ERROR - Could not load 'guard/rspec'`
-    
-    
-    
+- **2. Guard can not find class**
+-
+`ERROR - Could not load 'guard/rspec'`<br>
+step 1:
+check your capybara version in Gemfile
+make sure it's version is more than `2.2.0`<br>
+
+step 2:
+`bundle update`
+
+step 3:
+`bundle exec guard`
