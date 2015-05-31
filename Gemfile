@@ -12,6 +12,9 @@ group :development, :test do
   gem 'rb-readline'
   gem 'rb-fsevent', require: false
   gem 'guard-livereload'
+  gem 'spork-rails', github: 'railstutorial/spork-rails'
+  gem 'guard-spork', '1.5.0'
+  gem 'childprocess', '0.5.6'
 end
 
 group :test do
