@@ -28,7 +28,7 @@ You may be counter some problems in this sample application.
     modify your `config/environment/development.rb` `production.rb`. `test.rb`
     from `Rails.application.configure` to `YourAppName::Aplication.configure`
     
-    
+   `ERROR - Could not load 'guard/rspec'`
     
     
     
