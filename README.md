@@ -34,17 +34,39 @@ You may be counter some problems in this sample application.
 -
 `ERROR - Could not load 'guard/rspec'`<br>
 `cannot load such file -- guard/guard (LoadError)`<br>
-step 1:
+step 1:<br>
 check your capybara version in Gemfile
 make sure it's version is more than `2.2.0`<br>
 or even <font color=red>delete</font> the description of capybara
 
-step 2:
+step 2:<br>
 `bundle update`
 
-step 3:
+step 3:<br>
 `bundle exec guard`
 
 <br>
 
+- **3. Spork server causes a Exception**
 -
+`Exception encountered: #<ActiveRecord::ConnectionNotEstablished: ActiveRecord::ConnectionNotEstablished>`<br>
+`#<NameError: uninitialized constant RSpec::Core::CommandLine>`<br>
+step 1:<br>
+check your `spec_helper.rb` is the same as <a href="https://github.com/railstutorial/sample_app_rails_4/blob/master/spec/spec_helper.rb">this</a><br>
+<br>
+
+step 2:<br>
+add the support file to spork<br>
+`mkdir spec/support`
+and add the support file called `spork_patch.rb` like <a href="https://gist.github.com/denispeplin/408d6bb894d5a546aa69">this</a><br>
+<br>
+
+step 3:<br>
+restart spork server.<br>`bundle exec spork` <br>
+
+step 4:<br>
+`bundle exec rspec spec/requests/static_pages --drb` in new window 
+
+
+
+<br> 
