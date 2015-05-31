@@ -33,12 +33,18 @@ You may be counter some problems in this sample application.
 - **2. Guard can not find class**
 -
 `ERROR - Could not load 'guard/rspec'`<br>
+`cannot load such file -- guard/guard (LoadError)`<br>
 step 1:
 check your capybara version in Gemfile
 make sure it's version is more than `2.2.0`<br>
+or even <font color=red>delete</font> the description of capybara
 
 step 2:
 `bundle update`
 
 step 3:
 `bundle exec guard`
+
+<br>
+
+-
