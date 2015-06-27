@@ -8,5 +8,5 @@ module ApplicationHelper
     else
       "#{base_title} | #{page_title}"
     end
-  end
+  end # end def
 end
