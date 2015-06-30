@@ -68,5 +68,12 @@ step 4:<br>
 `bundle exec rspec spec/requests/static_pages --drb` in new window 
 
 
+- **4. Named routes in Rspec could not work**
+-  
+`undefined local variable or method 'XXX_path' ` if you not defined named routes in rspec_helper
+you just add this line:
 
+`config.include Rails.application.routes.url_helpers`
+
+    
 <br> 

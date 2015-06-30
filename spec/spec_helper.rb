@@ -44,6 +44,8 @@ Spork.prefork do
     config.order = "random"
     # Include the Capybara DSL so that specs in spec/requests still work.
     config.include Capybara::DSL
+    # Make named routes in RSpec could work
+    config.include Rails.application.routes.url_helpers
     # Disable the old-style object.should syntax.
     config.expect_with :rspec do |c|
       c.syntax = :expect
