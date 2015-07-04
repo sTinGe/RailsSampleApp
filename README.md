@@ -77,3 +77,8 @@ you just add this line:
 
     
 <br> 
+- **5. RSpec be_false error**
+-
+`expected false to respond to 'false?'`
+<br>using `bcrypt-ruby 3.0.1` for password validation need to notice there are some differences in <font color=red>RSpec 3.0</font><br>
+please change `be_true/befalse` to `be_truthly/be_falsey`
